@@ -1,4 +1,4 @@
-A better version of this file: https://github.com/iammichellechic/productecommerceshop
+This is a redo of this file: https://github.com/iammichellechic/productecommerceshop
 
 # Getting Started with Create React App
 
