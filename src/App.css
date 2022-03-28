@@ -1,38 +1,292 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap");
+
+:root {
+  --background-color: #f3f3f3;
+  --header-text-color: #615551;
+  --header-background-color: #f38e82;
+  --secondary-color: #75577d; /*https://rgbcolorcode.com/color/african-violet*/
+  --cta-color: #ffbf00;
+  /* --box-shadow:2px 2px 2px lightgray; */
+  /* --text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2); */
+  /* --text-shadow: 4px 3px 0px #7a7a7a; */
+  --border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  outline: none;
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: var(--background-color);
+  height: 100vh;
+  padding: 2rem;
+}
+
+footer {
+  height: 60px;
+  background-color: var(--secondary-color);
+}
+
+h1 {
+  font-size: 50px;
+  text-shadow: var(--text-shadow);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+h2 {
+  color: var(--header-background-color);
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 4rem;
+  margin: 10px;
+}
+
+section {
+  padding: 20px 7%;
+}
+
+a{
+  text-decoration: none;
+}
+
+/*HEADER related*/
+
+nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 0 2rem;
+}
+
+.siteheader {
+  height: 80px;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--header-text-color);
+  font-weight: 700;
+  background-color: var(--header-background-color);
+}
+
+.navmenu {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.navicons {
+  display: flex;
+  list-style: none;
+  gap: 5px;
+}
+.navicon {
+  font-size: 26px;
+}
+
+.navanchor {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navanchor:hover {
+  color: var(--cta-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+  font-size: 26px;
+}
+
+.logoicon {
+  font-size: 40px;
+  color: var(--secondary-color);
+}
+
+.logopart2 {
+  color: var(--secondary-color);
+}
+
+/* .headeranchor {
+  color: white;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+.headeranchor:hover {
+  background-color: var(--cta-color);
+}
+.headeranchor.active {
+  color: var(--secondary-color); */
+
+.siteheader a {
+ color: white;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.siteheader a:hover,
+.siteheader a:active,
+.siteheader a.active {
+  color: var(--secondary-color);
+}
+
+/* card related */
+/* products */
+
+.products {
+  text-align: center;
+}
+
+.productgallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+/*product item related*/
+
+.productgallery_card {
+  font: 13px/23px "Nunito", sans-serif;
+  box-shadow: 8px 8px 19px -13px #000000;
+}
+
+.productgallery_card_container {
+  margin: 0 auto;
+  width: 300px;
+  height: 450px;
+  background: white;
+  border-radius: 3px;
+  position: relative;
+}
+
+.information {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.name {
+  font-size: 20px;
+  height: 100px;
+  padding: 0 10px;
+}
+
+.readMore{
+  font-size: 10px;
+  padding: 0 10px;
+}
+
+.store {
+  font-size: 16px;
+  color: #8c98a8;
+  margin-bottom: 20px;
+}
+
+.storebutton {
+  text-decoration: none;
+  background-color: var(--cta-color);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 12px 54px;
+  border-radius: 5px;
+  color: #ffffff;
+  display: inline-block;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.hero-image {
+  padding: 20px;
+  height: 200px;
+  width: 300px;
+  object-fit: contain;
+}
+
+/*HOME related*/
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(../public/images/hero-image\ 2.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home .content {
+  max-width: 800px;
+}
+
+.home .content h1 {
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.home .content p {
+  font-size: 30px;
+  font-weight: 200;
+  line-height: 1.8;
+  padding: 1rem 0;
+  color: #eee;
+}
+
+.ctabutton {
+  padding: 10px 40px;
+  margin: 20px;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: var(--cta-color);
+  display: inline-block;
+  transform: translate(200px, 0px);
+  cursor: pointer;
+}
+
+/*search*/
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #f38e82;
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #f38e82;
+}
+
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 50%;
+  position: absolute;
+  margin-top: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
